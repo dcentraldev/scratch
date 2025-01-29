@@ -1,0 +1,10 @@
+[solana]
+usdc_mint_address = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+# Add your WSS endpoint for Solana Node
+ws_url = 
+# Add your HTTPS endpoint for Solana Node
+rpc_url = 
+
+[transaction]
+min_transfer_amount = 50.0
+max_transactions = 5
