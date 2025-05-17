@@ -1,0 +1,27 @@
+# Binaries
+*.exe
+*.o
+*.a
+
+# Test binaries and results
+*_test
+*_benchmark
+testdata
+
+# Dependency directories (if using vendoring or modules)
+vendor/
+go.mod
+go.sum
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+
+# OS generated files
+.DS_Store
+
+# Temporary files
+*~
+
+bin

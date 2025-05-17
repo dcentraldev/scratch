@@ -1,0 +1,24 @@
+
+OUTPUT_FOLDER=bin
+OUTPUT_BINARY=calibr8
+
+.PHONY: init
+init:
+	go mod tidy
+	go fmt ./...
+
+
+.PHONY: run
+run:
+	go run cli/main.go \
+		--dataset="test" \
+		--helius_grpc_url="https://api.testnet.solana.com" \
+		--helius_api_key="testkey"
+
+.PHONY: build
+build: clean init
+	go build -o ${OUTPUT_FOLDER}/${OUTPUT_BINARY} cli/main.go
+
+.PHONY: clean
+clean:
+	rm -rf ${OUTPUT_FOLDER}
